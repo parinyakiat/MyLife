@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">MyStore</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="share_item">share</string>
+    <string name="share_success_text"> I am using MyStore Application, it very easy. </string>
+
+    <string name="back_butoon">BACK</string>
+    <string name="loginBtn">Login</string>
+    <string name="RegisterBtn">Register</string>
+    <string name="ConfrimBtn">Confrim</string>
+    <string name="CancelBtn">Cancel</string>
+
+    <string name="logoLogin">MyStore</string>
+    <string name="logoRegister">Register</string>
+    <string name="logo">Product</string>
+
+    <string name="usernameInput">Username</string>
+    <string name="passwordInput">Password</string>
+    <string name="confrimPasswordInput">Comfrim Password</string>
+    <string name="emailInput">Email</string>
+    <string name="nameProductInput">Name Product</string>
+    <string name="idInput">ID</string>
+    <string name="typeInput">Type</string>
+    <string name="addressInput">Address</string>
+
+    <string name="University">Burapha University</string>
+    <string name="name">Mr.Parinyakiat Sukprasert</string>
+    <string name="major">Informatics</string>
+    <string name="idCard">59161100</string>
+
+
+
+
+</resources>

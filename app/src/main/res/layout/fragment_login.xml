@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+                name="loginViewModel"
+                type="com.example.application_v2.login.LoginViewModel" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <TextView
+                android:id="@+id/text_gym"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="80dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/logoLogin"
+                android:textSize="42sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+                android:id="@+id/button_login"
+                android:layout_width="137dp"
+                android:layout_height="53dp"
+                android:layout_marginTop="16dp"
+                android:onClick="@{() -> loginViewModel.clickButton()}"
+                android:text="@string/loginBtn"
+                app:layout_constraintStart_toStartOf="@+id/input_password"
+                app:layout_constraintTop_toBottomOf="@+id/input_password" />
+
+        <Button
+                android:id="@+id/button_register"
+                android:layout_width="137dp"
+                android:layout_height="53dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/RegisterBtn"
+                app:layout_constraintEnd_toEndOf="@+id/input_password"
+                app:layout_constraintTop_toBottomOf="@+id/input_password" />
+
+        <EditText
+                android:id="@+id/input_username"
+                android:layout_width="324dp"
+                android:layout_height="58dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:ems="10"
+                android:hint="@string/usernameInput"
+                android:inputType="textPersonName"
+                android:text="@={loginViewModel.inputusername}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.492"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_gym" />
+
+        <EditText
+                android:id="@+id/input_password"
+                android:layout_width="324dp"
+                android:layout_height="58dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:ems="10"
+                android:hint="@string/passwordInput"
+                android:inputType="textPersonName"
+                android:password="true"
+                android:text="@={loginViewModel.inputPassword}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/input_username" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

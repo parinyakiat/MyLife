@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+                name="registerViewModel"
+                type="com.example.application_v2.register.RegisterViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <TextView
+                android:id="@+id/text_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="80dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/logoRegister"
+                android:textSize="42sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+                android:id="@+id/input_username"
+                android:layout_width="324dp"
+                android:layout_height="58dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:ems="10"
+                android:hint="@string/usernameInput"
+                android:inputType="textPersonName"
+                android:text="@={registerViewModel.inputusername}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.492"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_register" />
+
+        <EditText
+                android:id="@+id/input_password"
+                android:layout_width="324dp"
+                android:layout_height="58dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:ems="10"
+                android:hint="@string/passwordInput"
+                android:inputType="textPersonName"
+                android:password="true"
+                android:text="@={registerViewModel.inputPassword}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.492"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/input_username" />
+
+        <EditText
+                android:id="@+id/input_confrim_password"
+                android:layout_width="324dp"
+                android:layout_height="58dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:ems="10"
+                android:hint="@string/confrimPasswordInput"
+                android:inputType="textPersonName"
+                android:password="true"
+                android:text="@={registerViewModel.inputConfirmPassword}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.492"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/input_password" />
+
+        <EditText
+                android:id="@+id/input_email"
+                android:layout_width="324dp"
+                android:layout_height="58dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:ems="10"
+                android:hint="@string/emailInput"
+                android:inputType="textPersonName"
+                android:text="@={registerViewModel.inputEmail}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.492"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/input_confrim_password" />
+
+        <Button
+                android:id="@+id/button_confrim"
+                android:layout_width="137dp"
+                android:layout_height="53dp"
+                android:layout_marginTop="16dp"
+                android:onClick="@{() -> registerViewModel.clickButton()}"
+                android:text="@string/ConfrimBtn"
+                app:layout_constraintStart_toStartOf="@+id/input_email"
+                app:layout_constraintTop_toBottomOf="@+id/input_email" />
+
+        <Button
+                android:id="@+id/button_cancel"
+                android:layout_width="137dp"
+                android:layout_height="53dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/CancelBtn"
+                app:layout_constraintEnd_toEndOf="@+id/input_email"
+                app:layout_constraintTop_toBottomOf="@+id/input_email" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
